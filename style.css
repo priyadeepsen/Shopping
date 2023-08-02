@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Ubuntu:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;
+}
+
+h1{
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+}
+
+h2{
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+}
+
+h4{
+    font-size: 20px;
+    color: #222;
+}
+
+h6{
+    font-size: 12px;
+    font-weight: 700;
+}
+
+p {
+    font-size: 16px;
+    color: #465b52;
+}
+
+.section-p1{
+    padding: 40px 80px;
+}
+
+.section-m1{
+    margin: 40px 0;
+}
+
+body{
+    width: 100%;
+}
+
+
+/* Header START */
+
+.logo {
+    width: 70px;
+    height: 60px;
+    border-radius: 10px; /* Add rounded corners to the logo */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+    transition: transform 0.3s ease-in-out; /* Add a smooth transition on hover */
+}
+
+.logo:hover {
+    transform: scale(1.1); /* Increase the size on hover for a beautiful effect */
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 80px;
+    background-color: rgb(157, 201, 37);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+
+
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#navbar li {
+    list-style: none;
+    padding: 0 10px;
+    position: relative;
+}
+
+
+#navbar li a{
+    font-family: monospace;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: 0.3s ease;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+    color: #d71a1a;
+}
+/* Smoothly animate the underline effect on hover */
+#navbar li a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background: #088178;
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%); /* Center the underline using translate */
+    transition: width 0.3s ease;
+}
+
+#navbar li a:hover::after {
+    width: 50%;
+}
+
+/*  ================ HOME PAGE =====================================*/
+
+#hero{
+    background-image: url("pictures/herobackground.jpg");
+    height: 90vh;
+    width: 100%;
+    background-position: top 25% right 0;
+    padding: 0 80p;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#hero h4,
+#hero h2,
+#hero h1,
+#hero p {
+    font-family: 'Pacifico', cursive; 
+    color: #FF9933;
+}
+
+#hero h2 {
+    font-size: 36px;
+    font-style: italic;
+    color: rgb(18, 152, 38);
+}
+
+#hero h1 {
+    font-size: 48px; 
+    color: #204ac7;
+}
+
+#hero h4 {
+    font-size: 50px;
+}
+
+#hero p {
+    font-size: 28px;
+    color: rgb(127, 6, 73);
+}
+
+
+/* Shop Now button styles */
+#hero button {
+    padding: 16px 40px; 
+    font-size: 24px; 
+    font-weight: bold;
+    background-color: #FF9933;
+    color: #fff;
+    border: none;
+    border-radius: 50px; 
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+#hero button:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+}
+
+/* Intuitive arrow icon */
+#hero button::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 20px; 
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 14px solid #fff; 
+    transform: translateY(-50%);
+}
+
+
+/* Free Shipping Logo*/
+
+#feature {
+    padding: 40px 80px;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.fe-box {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Adjust the box shadow */
+    padding: 20px;
+    border: 1px solid #088178;
+    border-radius: 8px; /* Adjust border radius to make the shadow square */
+    transition: transform 0.3s ease; /* Add a transition for the hover effect */
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.fe-box:hover {
+    transform: scale(1.05); /* Apply a slight scale-up effect on hover */
+}
+
+.fe-box img {
+    width: 100px;
+    height: 100px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.fe-box h6 {
+    display: inline-block;
+    font-size: 18px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    padding: 9px 8px 6px 8px;
+    border-radius: 4px;
+    color: rgb(6, 69, 111);
+    background-color: #c891e1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
